@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/activity_main_scene2"
+    tools:context=".MainActivity"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingLeft="20dp"
+        android:layout_weight="2"
+        android:text="www.naver.com"
+        android:autoLink="web"
+        android:textColorLink="@color/green"
+        android:background="#555555"
+        android:textColor="@color/green"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingLeft="20dp"
+        android:layout_weight="2"
+        android:text="do11anm@naver.com"
+        android:autoLink="email"
+        android:textColorLink="@color/green"
+        android:background="#555555"
+        android:textColor="@color/green"/>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingLeft="20dp"
+        android:layout_weight="2"
+        android:text="+82 10-1234-5678"
+        android:autoLink="phone"
+        android:textColorLink="@color/green"
+        android:background="#555555"
+        android:textColor="@color/green"/>
+
+    <TextView
+        android:id="@+id/tv5"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingLeft="20dp"
+        android:layout_weight="2"
+        android:text="86th St Transverse, New York, NY 10024"
+        android:autoLink="map"
+        android:textColorLink="@color/green"
+        android:background="#555555"
+        android:textColor="@color/green"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="20dp"
+        android:text="안녕"
+        android:layout_gravity="end|center_vertical"
+        android:background="#00AA00"
+        android:textColor="#0000FF"/>
+
+</LinearLayout>

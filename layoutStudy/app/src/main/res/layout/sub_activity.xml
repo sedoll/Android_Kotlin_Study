@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+        android:backgroundTintMode="multiply"
+        android:drawableTop="@drawable/ic_launcher_foreground"
+        android:drawablePadding="20dp"
+        android:drawableTint="#555555"
+        android:text="텍스트"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+        android:backgroundTintMode="multiply"
+        android:drawableTop="@drawable/ic_launcher_foreground"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:drawableRight="@drawable/ic_launcher_foreground"
+        android:drawableBottom="@drawable/ic_launcher_foreground"
+        android:drawablePadding="20dp"
+        android:drawableTint="#555555"
+        android:layout_gravity="bottom"
+        android:textSize="40sp" />
+</FrameLayout>
