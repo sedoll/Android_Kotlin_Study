@@ -3,9 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/git/Android_Kotlin_Study/layoutStudy/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/git/Android_Kotlin_Study/layoutStudy/app/src/main/res/layout/sub_activity.xml" value="0.25" />
-        <entry key="..\:/git/Android_Kotlin_Study/layoutStudy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22777777777777777" />
+        <entry key="..\:/git/Android_Kotlin_Study/Login/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/git/Android_Kotlin_Study/Login/app/src/main/res/layout/activity_sub.xml" value="0.33" />
       </map>
     </option>
   </component>

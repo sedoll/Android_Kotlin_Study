@@ -45,8 +45,8 @@
         android:layout_margin="5dp"
         android:paddingLeft="20dp"
         android:layout_weight="2"
-        android:text="+82 10-1234-5678"
-        android:autoLink="phone"
+        android:text="+82 10-1234-5678 \n www.naver.com"
+        android:autoLink="phone|web"
         android:textColorLink="@color/green"
         android:background="#555555"
         android:textColor="@color/green"/>
