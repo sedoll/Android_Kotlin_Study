@@ -9,14 +9,9 @@
 
     <TextView
         android:id="@+id/tv1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="서브액티비티" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send"
-        android:textAllCaps="false"/>
+        android:text="서브액티비티"
+        android:textSize="20sp"/>
 
 </LinearLayout>
