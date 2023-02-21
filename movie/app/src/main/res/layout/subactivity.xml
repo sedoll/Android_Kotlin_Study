@@ -7,11 +7,10 @@
     android:orientation="vertical"
     app:layoutDescription="@xml/subactivity_scene">
 
-    <TextView
-        android:id="@+id/tv1"
+    <ListView
+        android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="서브액티비티"
-        android:textSize="20sp"/>
+        android:layout_height="match_parent"
+        android:layout_weight="8"/>
 
 </LinearLayout>
