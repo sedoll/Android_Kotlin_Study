@@ -13,10 +13,13 @@ import androidx.annotation.RequiresApi
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import java.lang.Exception
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +28,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var items: MutableList<ListViewItem>
 
     val map: MutableMap<Int?, String?> = HashMap()
+
+    val retrofit = Retrofit.Builder()
+        .baseUrl("https://dapi.kakao.com")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,21 +51,21 @@ class MainActivity : AppCompatActivity() {
         // ListView에 어댑터를 설정합니다.
         listView.adapter = adapter
 
-        // 버튼을 클릭했을 때 아이템을 추가합니다.
-        val button = findViewById<Button>(R.id.add_button)
-        button.setOnClickListener {
-            items.clear() // 아이템 리스트 초기화
-            jsonTask()
-            Toast.makeText(this, "박스오피스 조회", Toast.LENGTH_SHORT).show()
-        }
+            // 버튼을 클릭했을 때 아이템을 추가합니다.
+            val button = findViewById<Button>(R.id.add_button)
+            button.setOnClickListener {
+                items.clear() // 아이템 리스트 초기화
+                jsonTask()
+                Toast.makeText(this, "박스오피스 조회", Toast.LENGTH_SHORT).show()
+            }
 
-        listView.setOnItemClickListener { parent, view, position, id ->
-            val movieCode = map.get(position).toString()
-            val intent = Intent(this, SubActivity::class.java)
-            intent.putExtra("movieCode", movieCode)
-            startActivity(intent)
-            println("영화 코드: " + movieCode)
-        }
+            listView.setOnItemClickListener { parent, view, position, id ->
+                val movieCode = map.get(position).toString()
+                val intent = Intent(this, SubActivity::class.java)
+                intent.putExtra("movieCode", movieCode)
+                startActivity(intent)
+                println("영화 코드: " + movieCode)
+            }
 
     }
 
@@ -82,7 +90,6 @@ class MainActivity : AppCompatActivity() {
                     val audiAcc = decimal.format(movie.getString("audiAcc").toInt()) // 천 단위 적용, 무조건 정수타입만 가능
                     val audiCnt = decimal.format(movie.getString("audiCnt").toInt()) // 천 단위 적용, 무조건 정수타입만 가능
                     val movieCd = movie.getString("movieCd") // 영화 코드 / ListViewitem을 누른 경우 해당 영화에 대한 소개 페이지로 넘어가기 위해 영화 코드를 받음
-
                     map[rank.toInt()-1] = movieCd // position이 0부터 시작하므로 키를 0부터 값 대입
 
                     // TODO: 파싱한 데이터를 활용하는 코드 작성
@@ -91,6 +98,7 @@ class MainActivity : AppCompatActivity() {
                     val item = ListViewItem(drawable, rank + ". " + movieNm,"개봉일: " + openDt,  "관객 / 어제: " + audiCnt + "  누적: " + audiAcc + " 명")
                     items.add(item)
                     adapter.notifyDataSetChanged()
+
                 }
             },
             { error ->
