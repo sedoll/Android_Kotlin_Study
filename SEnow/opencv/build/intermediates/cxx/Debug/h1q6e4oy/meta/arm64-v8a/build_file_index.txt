@@ -1,1 +1,0 @@
-C:\git\Android_Kotlin_Study\SEnow\opencv\libcxx_helper\CMakeLists.txt
