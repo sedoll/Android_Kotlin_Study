@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "553958572297",
+    "project_id": "login-f5473",
+    "storage_bucket": "login-f5473.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553958572297:android:d0453f6459c168e6a753d8",
+        "android_client_info": {
+          "package_name": "com.example.kakao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553958572297-2i7q1q6ko6bgm7rhtk249e1aackco36m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlMWPuhvBFkAXdHsdMpEeBq_6NAb2elCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553958572297-2i7q1q6ko6bgm7rhtk249e1aackco36m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
